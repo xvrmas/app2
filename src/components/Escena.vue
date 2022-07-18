@@ -1,6 +1,11 @@
 <template>
-  <div>
-    <h4>{{ posts.text }}</h4>
+<button>Anterior</button>
+<button>Següent</button>
+
+  <div
+     v-for="(value, key) in posts"
+     :key="key">
+    <h4>{{ value.text }}</h4>
   </div>
 </template>
 
