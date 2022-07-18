@@ -1,13 +1,13 @@
 <template>
   <div>
-    <h4>{{ title }}</h4>
+    <h4>{{ posts.text }}</h4>
   </div>
 </template>
 
 <script>
 export default {
   name: "Escena",
-  props: ["title", "img"],
+  props: [`posts`],
   methods: {},
 };
 </script>
