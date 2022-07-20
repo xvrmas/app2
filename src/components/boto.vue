@@ -4,7 +4,6 @@
 </template>
 <script>
 export default {
-  props: ["casa"],
   emits: ["accio1", "accio2"],
 };
 </script>

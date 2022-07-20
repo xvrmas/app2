@@ -5,7 +5,6 @@
 </template>
 
 <script>
-import Boto from "./boto.vue";
 export default {
   name: "Escena",
   props: [`posts`],
@@ -19,7 +18,6 @@ export default {
     //   this.activeItem = i;
     // },
   },
-  components: { Boto },
 };
 </script>
 
