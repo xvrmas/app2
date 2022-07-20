@@ -5,7 +5,7 @@
 
 <script>
 import Escena from "@/components/Escena.vue"
-import Boto from "@/components/Boto.vue"
+import Boto from "@/components/Boto"
 export default {
   components: { Escena, Boto },
 
