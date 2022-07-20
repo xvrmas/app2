@@ -1,34 +1,38 @@
 <template>
+  <Boto @accio1="selectedItem" @accio2="alerta2"></Boto>
   <Escena :posts="posts"></Escena>
 </template>
 
 <script>
 import Escena from "@/components/Escena.vue";
+import boto from "@/components/boto.vue";
+import Boto from "@/components/boto.vue";
 export default {
-  components: { Escena },
+  components: { Escena, boto, Boto },
 
   data() {
     return {
       posts: [
-        {id:1,
+        {
           text: `El nostre heroi estava surant per l'espai sideral quan a la llunyania va albirar una nau espacial`,
         },
-        {id:2,
+        {
           text: "Sentia curiositat per l'interior de la nau i es va posar a inspeccionar-la. Va arribar a una sala amb dues portes.",
         },
-        {id:3,
-          text: "L'heroi va decidir travessar la porta que el portava a casa",
-        },
-        {id:4,
+        { text: "L'heroi va decidir travessar la porta que el portava a casa" },
+        {
           text: "Mentrestant, altres herois no van tenir tanta sort en la seva elecció ...",
         },
       ],
     };
   },
   methods: {
-    alerta1() {
-      alert("Hola");
+    selectedItem(i) {
+      alert(i);
     },
+    // alerta1() {
+    //   alert("Hola");
+    // },
     alerta2() {
       alert("Adios");
     },

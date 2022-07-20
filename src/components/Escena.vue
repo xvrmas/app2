@@ -1,19 +1,25 @@
 <template>
-<button>Anterior</button>
-<button>Següent</button>
-
-  <div
-     v-for="(value, key) in posts"
-     :key="key">
+  <div v-for="(value, i) in posts" :key="i">
     <h4>{{ value.text }}</h4>
   </div>
 </template>
 
 <script>
+import Boto from "./boto.vue";
 export default {
   name: "Escena",
   props: [`posts`],
-  methods: {},
+  // data() {
+  //   return {
+  //     activeItem: i,
+  //   };
+  // },
+  methods: {
+    // selectdItem(i) {
+    //   this.activeItem = i;
+    // },
+  },
+  components: { Boto },
 };
 </script>
 
