@@ -1,13 +1,13 @@
 <template>
-  <boto @accio1="selectedItem" @accio2="alerta2"></boto>
+  <Boto @accio1="selectedItem" @accio2="alerta2"></Boto>
   <Escena :posts="posts"></Escena>
 </template>
 
 <script>
 import Escena from "@/components/Escena.vue";
-import boto from "@/components/boto.vue";
+import Boto from "@/components/Boto.vue";
 export default {
-  components: { Escena, boto },
+  components: { Escena, Boto },
 
   data() {
     return {

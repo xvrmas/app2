@@ -8,11 +8,11 @@
 export default {
   name: "Escena",
   props: [`posts`],
-  // data() {
-  //   return {
-  //     activeItem: i,
-  //   };
-  // },
+  data() {
+    return {
+      caseta:'hola lala'
+    };
+  },
   methods: {
     // selectdItem(i) {
     //   this.activeItem = i;
