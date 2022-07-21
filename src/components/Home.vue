@@ -1,11 +1,11 @@
 <template>
-  <Boto @accio1="selectedItem" @accio2="alerta2"></Boto>
-  <Escena :posts="posts"></Escena>
+  <Boto @accio1="selectedItem1" @accio2="selectedItem2"></Boto>
+  <Escena :llista="posts" :seleccionat="currentSentence"></Escena>
 </template>
 
 <script>
-import Escena from "@/components/Escena.vue"
-import Boto from "@/components/Boto"
+import Escena from "@/components/Escena.vue";
+import Boto from "@/components/Boto";
 export default {
   components: { Escena, Boto },
 
@@ -23,17 +23,15 @@ export default {
           text: "Mentrestant, altres herois no van tenir tanta sort en la seva elecció ...",
         },
       ],
+      currentSentence: 0,
     };
   },
   methods: {
-    selectedItem(i) {
-      alert(i);
+    selectedItem1() {
+      this.currentSentence--;
     },
-    // alerta1() {
-    //   alert("Hola");
-    // },
-    alerta2() {
-      alert("Adios");
+    selectedItem2() {
+      this.currentSentence++;
     },
   },
 };

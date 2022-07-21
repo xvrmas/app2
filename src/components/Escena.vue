@@ -1,5 +1,9 @@
 <template>
-  <div v-for="(value, i) in posts" :key="i">
+  <div
+    v-for="(value, i) in llista"
+    :key="i"
+    :class="{ active: i === seleccionat }"
+  >
     <h4>{{ value.text }}</h4>
   </div>
 </template>
@@ -7,17 +11,13 @@
 <script>
 export default {
   name: "Escena",
-  props: [`posts`],
+  props: [`llista`, "seleccionat"],
   data() {
     return {
-      caseta:'hola lala'
+      active: null,
     };
   },
-  methods: {
-    // selectdItem(i) {
-    //   this.activeItem = i;
-    // },
-  },
+  methods: {},
 };
 </script>
 
@@ -27,9 +27,15 @@ body {
   align-content: center;
   text-align: center;
 }
+
 h4 {
   border: solid;
+  background-color: rgb(255, 255, 255);
   border-radius: 40px;
   padding: 10px;
+}
+
+.active > h4 {
+  background-color: rgb(244, 190, 184);
 }
 </style>
