@@ -1,6 +1,18 @@
 <template>
-  <Boto @accio1="selectedItem1" @accio2="selectedItem2"></Boto>
-  <Escena :llista="posts" :seleccionat="currentSentence"></Escena>
+  <Boto
+    @accio1="selectedItem1"
+    @accio2="selectedItem2"
+    :condition="condition"
+  ></Boto>
+  <Escena
+    :llista="posts"
+    :seleccionat="currentSentence"
+    :condition="condition"
+  ></Escena>
+  <div v-if="!condition">
+  <h3>Benviguts a la web de formacio</h3><br>
+    <button @click="mostrar">{{ 'Iniciar' }}</button>
+  </div>
 </template>
 
 <script>
@@ -24,9 +36,13 @@ export default {
         },
       ],
       currentSentence: 0,
+      condition: false,
     };
   },
   methods: {
+    mostrar() {
+      this.condition = true;
+    },
     selectedItem1() {
       this.currentSentence--;
     },
