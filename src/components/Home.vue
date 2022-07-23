@@ -10,7 +10,7 @@
     :condition="condition"
   ></Escena>
   <div v-if="!condition">
-  <h3>Benviguts a la web de formacio</h3><br>
+  <h3>Benviguts a la web de formació</h3><br>
     <button @click="mostrar">{{ 'Iniciar' }}</button>
   </div>
 </template>
