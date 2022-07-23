@@ -1,10 +1,13 @@
 <template>
+
   <div v-if="condition">
     <div
       v-for="(value, i) in llista"
       :key="i"
       :class="{ active: i === seleccionat }"
+      :imatge="value.img"
     >
+    
       <h4>{{ value.text }}</h4>
     </div>
   </div>
